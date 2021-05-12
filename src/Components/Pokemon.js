@@ -35,6 +35,7 @@ class Pokemon extends Component {
       this.setState({
         currentPokemon: {},
         searchPokemon: "",
+        isError: true,
       });
     }
   };
@@ -43,7 +44,7 @@ class Pokemon extends Component {
     const { searchPokemon, currentPokemon, isError } = this.state;
     return (
       <div>
-        <h1>Search for a Pokemon</h1>
+        <h1>"Search for a Pokemon"</h1>
         <form onSubmit={this.handleSubmit}>
           <input
             value={searchPokemon}
@@ -53,7 +54,9 @@ class Pokemon extends Component {
           />
           <button>Submit</button>
         </form>
-        <PokemonCard pokemon={currentPokemon} />
+
+        {currentPokemon.sprites ? <PokemonCard pokemon={currentPokemon} /> : null}
+        
         {isError && <h2>Pokemon not found!</h2>}
       </div>
     );

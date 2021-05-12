@@ -113,6 +113,49 @@ of the character should appear below.
 
 <hr />
 
+
+Error Codes:
+
+1. Expected corresponding JSX closing tag for <Route>.
+(App.js)(18) broken instance
+
+Solution: Reading the error code and recognizing the JSX instance was broken.
+
+2. Error: Invariant failed: You should not use <Link> outside a <Router>
+
+ Solution: Importing Browser Router into Index.js file.
+
+3. Needed to refractor the code because inability to render different links.
+
+  Solution: Moving Switch and router to Nav file.
+
+
+4. Styling width of 50px needed to be added needed to be included
+
+5. Try catch missing isError property in setState.
+   Solution: added to setState object
+
+6. Locations not rendering
+   Solution: Added get locations to ComponentDidMount and included await to the axios call.
+
+7. Berries weren't displaying data
+ Solution: Changed the parameter names and how the component was receiving data.
+
+ 
+
+
+
+
+(All cypress home file tests passing)
+
+
+
+
+
+
+
+
+
 Afterwards, you should work on styling:
 
 Import two fonts (of your choosing) from Google Fonts. The first font should be the font you use for header text and the second one should be for input/body/search result text.
